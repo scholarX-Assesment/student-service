@@ -1,10 +1,17 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-from . import models, schemas, crud, database
+import database.models as models
+import database.schemas as schemas
+import api.crud as crud
+import database.database as database
 
 models.Base.metadata.create_all(bind=database.engine)
 
 app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello, World!"}
 
 @app.post("/students/", response_model=schemas.Student)
 def create_student(student: schemas.StudentCreate, db: Session = Depends(database.get_db)):

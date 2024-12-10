@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session
-from . import models, schemas
+import database.models as models
+import database.schemas as schemas
 
 def create_student(db: Session, student: schemas.StudentCreate):
     db_student = models.Student(**student.dict())
