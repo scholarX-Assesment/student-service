@@ -49,9 +49,3 @@ The Student Service API is designed to manage student records, academic historie
     ```
 
 7. Access the API documentation at `http://127.0.0.1:8000/docs`.
-
-## Endpoints
-
-### Students
-
-// ...existing code...
