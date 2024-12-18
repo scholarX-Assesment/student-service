@@ -8,7 +8,7 @@ from typing import List
 
 models.Base.metadata.create_all(bind=database.engine)
 
-app = FastAPI()
+app = FastAPI(title="Student Service APIs")
 
 @app.get("/")
 def read_root():
