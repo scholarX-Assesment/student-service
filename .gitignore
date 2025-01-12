@@ -2,5 +2,5 @@
 /__pycache__
 .DS_Store
 *.pyc
-.db
-.__pycache__
+*.db
+*.__pycache__
